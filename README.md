@@ -15,6 +15,14 @@ Plazas de Seguridad y Ordenes a Comandantes.
     comandante tiene la información de: Nombre (String longitud:15), Apellido Paterno(String longitud:15) ,Cedula (Int), Especialidad
     (String,Longitud 15), Antiguedad (Int). El sistema debe dar la funcionalidad para dar de ALTA (Validada), BAJA, MODIFICAR y
     BUSCAR (por Nombre) del comandante.
+    
+    ```java
+    String Nombre;
+    String Apaterno;
+    Integer Cedula;
+    String Especialidad;
+    Integer Antiguedad;
+    ```
 
 * PLAZAS:
     * El sistema deberá tener un catálogo de las Plazas de Seguridad donde se maneja la información pertinente a cada sección del país, el
@@ -22,6 +30,13 @@ Plazas de Seguridad y Ordenes a Comandantes.
     Ciudad cede de la comandancia(String), IDPlaza (String). El Sistema debe dar la funcionalidad de ALTA (validada), BAJA,
     MODIFICAR y BUSCAR (Por nombre de plaza, Por IDPlaza) al catalogo de Plazas.
     ARCHIVOS
+    
+    ```java
+    Integer Plaza;
+    Integer NPC;
+    String Comandancia;
+    String IDPlaza;
+    ```
     
 > El Sistema deberá tener una pestaña de archivos donde generará un archivo de texto que contengan la totalidad de las plazas, así como
 > otro archivo de texto con la totalidad de los comandantes con los que cuenta el sistema. Otro botón permitirá Leer archivo de plazas o
