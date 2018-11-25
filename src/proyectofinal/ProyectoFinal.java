@@ -12,6 +12,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 package proyectofinal;
 
+import Graficas.Principal;
+
 /**
  *
  * @author omar
@@ -22,7 +24,8 @@ public class ProyectoFinal {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
+        Principal p = new Principal();
+        p.setVisible(true);
     }
     
 }

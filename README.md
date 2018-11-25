@@ -32,9 +32,10 @@ Plazas de Seguridad y Ordenes a Comandantes.
     ARCHIVOS
     
     ```java
-    Integer Plaza;
+    String Nombre;
+    Integer Policias;
     Integer NPC;
-    String Comandancia;
+    String Ciudad;
     String IDPlaza;
     ```
     
