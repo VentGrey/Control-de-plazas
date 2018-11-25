@@ -11,36 +11,15 @@ package MisClases;
  */
 public class Comandante {
     
+    /*TODO:
+    - Preguntarle a alguien mas cómo hizo sus getters/setters porque #didnotpractice
+    */
+    
     String Nombre, Apaterno, Especialidad;
     Integer Cedula, Antiguedad; //Quisiera pensar que la cédula es única
 
-    public Comandante(String Nombre, String Apaterno, String Especialidad, Integer Cedula, Integer Antiguedad) {
-        this.Nombre = Nombre;
-        this.Apaterno = Apaterno;
-        this.Especialidad = Especialidad;
+    public Comandante(Integer Cedula) {
         this.Cedula = Cedula;
-        this.Antiguedad = Antiguedad;
-    }
-    
-
-    public void setNombre(String Nombre) {
-        this.Nombre = Nombre;
-    }
-
-    public void setApaterno(String Apaterno) {
-        this.Apaterno = Apaterno;
-    }
-
-    public void setEspecialidad(String Especialidad) {
-        this.Especialidad = Especialidad;
-    }
-
-    public void setCedula(Integer Cedula) {
-        this.Cedula = Cedula;
-    }
-
-    public void setAntiguedad(Integer Antiguedad) {
-        this.Antiguedad = Antiguedad;
     }
 
     public String getNombre() {
@@ -62,6 +41,22 @@ public class Comandante {
     public Integer getAntiguedad() {
         return Antiguedad;
     }
-    
+
+    public void setNombre(String Nombre) {
+        this.Nombre = Nombre;
+    }
+
+    public void setApaterno(String Apaterno) {
+        this.Apaterno = Apaterno;
+    }
+
+    public void setEspecialidad(String Especialidad) {
+        this.Especialidad = Especialidad;
+    }
+
+    public void setAntiguedad(Integer Antiguedad) {
+        this.Antiguedad = Antiguedad;
+    }
+
     
 }
