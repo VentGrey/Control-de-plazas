@@ -46,12 +46,19 @@ public class Principal extends javax.swing.JFrame {
         jMenuItem5 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(250, 251, 252));
+
+        jMenuBar2.setBackground(new java.awt.Color(255, 255, 255));
+        jMenuBar2.setForeground(new java.awt.Color(255, 255, 255));
+        jMenuBar2.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
 
         jMenu4.setText("Archivo");
 
+        jMenuItem10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/media-floppy.png"))); // NOI18N
         jMenuItem10.setText("Guardar Archivo de Plazas");
         jMenu4.add(jMenuItem10);
 
+        jMenuItem11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/folder-blue-print.png"))); // NOI18N
         jMenuItem11.setText("Abrir Archivo de Plazas");
         jMenuItem11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -61,6 +68,7 @@ public class Principal extends javax.swing.JFrame {
         jMenu4.add(jMenuItem11);
         jMenu4.add(jSeparator3);
 
+        jMenuItem7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/media-floppy.png"))); // NOI18N
         jMenuItem7.setText("Guardar Archivo de Comandantes");
         jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -69,7 +77,7 @@ public class Principal extends javax.swing.JFrame {
         });
         jMenu4.add(jMenuItem7);
 
-        jMenuItem8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/folder-blue-icon.png"))); // NOI18N
+        jMenuItem8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/folder-blue-favorites.png"))); // NOI18N
         jMenuItem8.setText("Abrir Archivo de Comandantes");
         jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -79,6 +87,7 @@ public class Principal extends javax.swing.JFrame {
         jMenu4.add(jMenuItem8);
         jMenu4.add(jSeparator2);
 
+        jMenuItem9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/exit.png"))); // NOI18N
         jMenuItem9.setText("Salir");
         jMenu4.add(jMenuItem9);
 
