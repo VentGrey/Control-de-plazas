@@ -10,11 +10,8 @@ package MisClases;
  * @author omar
  */
 public class Plaza {
-    String Nombre;
-    Integer Policias;
-    Integer NPC;
-    String Ciudad;
-    String IdPlaza; //Único
+    String Nombre, Ciudad, IdPlaza;
+    Integer Policias, NPC;
 
     public Plaza(String Nombre, Integer Policias, Integer NPC, String Ciudad, String IdPlaza) {
         this.Nombre = Nombre;

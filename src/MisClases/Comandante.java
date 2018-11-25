@@ -12,7 +12,7 @@ package MisClases;
 public class Comandante {
     
     String Nombre, Apaterno, Especialidad;
-    Integer Cedula, Antiguedad;
+    Integer Cedula, Antiguedad; //Quisiera pensar que la cédula es única
 
     public Comandante(String Nombre, String Apaterno, String Especialidad, Integer Cedula, Integer Antiguedad) {
         this.Nombre = Nombre;
