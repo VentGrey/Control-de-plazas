@@ -13,36 +13,16 @@ public class Plaza {
     String Nombre, Ciudad, IdPlaza;
     Integer Policias, NPC;
 
-    public Plaza(String Nombre, Integer Policias, Integer NPC, String Ciudad, String IdPlaza) {
-        this.Nombre = Nombre;
-        this.Policias = Policias;
-        this.NPC = NPC;
-        this.Ciudad = Ciudad;
+    public Plaza(String IdPlaza) {
         this.IdPlaza = IdPlaza;
-    }
-
-    public String getNombre() {
-        return Nombre;
-    }
-
-    public Integer getPolicias() {
-        return Policias;
-    }
-
-    public Integer getNPC() {
-        return NPC;
-    }
-
-    public String getCiudad() {
-        return Ciudad;
-    }
-
-    public String getIdPlaza() {
-        return IdPlaza;
     }
 
     public void setNombre(String Nombre) {
         this.Nombre = Nombre;
+    }
+
+    public void setCiudad(String Ciudad) {
+        this.Ciudad = Ciudad;
     }
 
     public void setPolicias(Integer Policias) {
@@ -53,13 +33,25 @@ public class Plaza {
         this.NPC = NPC;
     }
 
-    public void setCiudad(String Ciudad) {
-        this.Ciudad = Ciudad;
+    public String getNombre() {
+        return Nombre;
     }
 
-    public void setIdPlaza(String IdPlaza) {
-        this.IdPlaza = IdPlaza;
+    public String getCiudad() {
+        return Ciudad;
     }
-    
+
+    public String getIdPlaza() {
+        return IdPlaza;
+    }
+
+    public Integer getPolicias() {
+        return Policias;
+    }
+
+    public Integer getNPC() {
+        return NPC;
+    }
+
     
 }
