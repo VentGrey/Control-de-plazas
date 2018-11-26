@@ -31,15 +31,16 @@ public class Principal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jDesktopPane1 = new javax.swing.JDesktopPane();
         jMenuBar2 = new javax.swing.JMenuBar();
         jMenu4 = new javax.swing.JMenu();
         jSeparator3 = new javax.swing.JPopupMenu.Separator();
-        jMenuItem6 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
+        cap_comand = new javax.swing.JMenuItem();
+        ver_coman = new javax.swing.JMenuItem();
+        edit_coman = new javax.swing.JMenuItem();
         jSeparator4 = new javax.swing.JPopupMenu.Separator();
-        jMenuItem7 = new javax.swing.JMenuItem();
-        jMenuItem8 = new javax.swing.JMenuItem();
+        save_com = new javax.swing.JMenuItem();
+        open_com = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
@@ -53,6 +54,17 @@ public class Principal extends javax.swing.JFrame {
         setBackground(new java.awt.Color(250, 251, 252));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
+        javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
+        jDesktopPane1.setLayout(jDesktopPane1Layout);
+        jDesktopPane1Layout.setHorizontalGroup(
+            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 828, Short.MAX_VALUE)
+        );
+        jDesktopPane1Layout.setVerticalGroup(
+            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 364, Short.MAX_VALUE)
+        );
+
         jMenuBar2.setBackground(new java.awt.Color(255, 255, 255));
         jMenuBar2.setForeground(new java.awt.Color(255, 255, 255));
         jMenuBar2.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
@@ -60,41 +72,41 @@ public class Principal extends javax.swing.JFrame {
         jMenu4.setText("Comandantes");
         jMenu4.add(jSeparator3);
 
-        jMenuItem6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/capture.png"))); // NOI18N
-        jMenuItem6.setText("Ingresar Comandante");
-        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+        cap_comand.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/capture.png"))); // NOI18N
+        cap_comand.setText("Ingresar Comandante");
+        cap_comand.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem6ActionPerformed(evt);
+                cap_comandActionPerformed(evt);
             }
         });
-        jMenu4.add(jMenuItem6);
+        jMenu4.add(cap_comand);
 
-        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/view.png"))); // NOI18N
-        jMenuItem2.setText("Ver Comandantes");
-        jMenu4.add(jMenuItem2);
+        ver_coman.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/view.png"))); // NOI18N
+        ver_coman.setText("Ver Comandantes");
+        jMenu4.add(ver_coman);
 
-        jMenuItem3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/modify.png"))); // NOI18N
-        jMenuItem3.setText("Modificar Comandantes");
-        jMenu4.add(jMenuItem3);
+        edit_coman.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/modify.png"))); // NOI18N
+        edit_coman.setText("Modificar Comandantes");
+        jMenu4.add(edit_coman);
         jMenu4.add(jSeparator4);
 
-        jMenuItem7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/media-floppy.png"))); // NOI18N
-        jMenuItem7.setText("Guardar Archivo de Comandantes");
-        jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
+        save_com.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/media-floppy.png"))); // NOI18N
+        save_com.setText("Guardar Archivo de Comandantes");
+        save_com.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem7ActionPerformed(evt);
+                save_comActionPerformed(evt);
             }
         });
-        jMenu4.add(jMenuItem7);
+        jMenu4.add(save_com);
 
-        jMenuItem8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/folder-blue-favorites.png"))); // NOI18N
-        jMenuItem8.setText("Abrir Archivo de Comandantes");
-        jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
+        open_com.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/folder-blue-favorites.png"))); // NOI18N
+        open_com.setText("Abrir Archivo de Comandantes");
+        open_com.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem8ActionPerformed(evt);
+                open_comActionPerformed(evt);
             }
         });
-        jMenu4.add(jMenuItem8);
+        jMenu4.add(open_com);
 
         jMenuBar2.add(jMenu4);
 
@@ -137,27 +149,30 @@ public class Principal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 828, Short.MAX_VALUE)
+            .addComponent(jDesktopPane1)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 364, Short.MAX_VALUE)
+            .addComponent(jDesktopPane1)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem6ActionPerformed
+    private void cap_comandActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cap_comandActionPerformed
+        Pnt_Captura_Comandante cap = new Pnt_Captura_Comandante();
+        cap.setDatos(datos);
+        this.jDesktopPane1.add(cap);
+        cap.setVisible(true);
+    }//GEN-LAST:event_cap_comandActionPerformed
 
-    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
+    private void save_comActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_save_comActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem7ActionPerformed
+    }//GEN-LAST:event_save_comActionPerformed
 
-    private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
+    private void open_comActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_open_comActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem8ActionPerformed
+    }//GEN-LAST:event_open_comActionPerformed
 
     private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed
         // TODO add your handling code here:
@@ -199,6 +214,9 @@ public class Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem cap_comand;
+    private javax.swing.JMenuItem edit_coman;
+    private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
@@ -206,15 +224,13 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem10;
     private javax.swing.JMenuItem jMenuItem11;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JMenuItem jMenuItem6;
-    private javax.swing.JMenuItem jMenuItem7;
-    private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JPopupMenu.Separator jSeparator3;
     private javax.swing.JPopupMenu.Separator jSeparator4;
     private javax.swing.JPopupMenu.Separator jSeparator5;
+    private javax.swing.JMenuItem open_com;
+    private javax.swing.JMenuItem save_com;
+    private javax.swing.JMenuItem ver_coman;
     // End of variables declaration//GEN-END:variables
 }
