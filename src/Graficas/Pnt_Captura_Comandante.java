@@ -91,6 +91,11 @@ public class Pnt_Captura_Comandante extends javax.swing.JInternalFrame {
         jLabel1.setText("Ingrese un número entero");
 
         btn_save.setText("Guardar");
+        btn_save.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_saveActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -166,6 +171,23 @@ public class Pnt_Captura_Comandante extends javax.swing.JInternalFrame {
     private void txt_nomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_nomActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_nomActionPerformed
+
+    private void btn_saveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_saveActionPerformed
+        Integer Cedula = Integer.valueOf(txt_ced.getText());
+        String Nombre = txt_nom.getText();
+        String Apaterno = txt_ape.getText();
+        Integer Antiguedad = Integer.valueOf(txt_ant.getText());
+        
+        Comandante c = new Comandante(Cedula);
+        c.setAntiguedad(Antiguedad);
+        
+        this.datos.add(c);
+        
+        txt_ced.setText("");
+        txt_nom.setText("");
+        txt_ape.setText("");
+        txt_ant.setText("");
+    }//GEN-LAST:event_btn_saveActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
