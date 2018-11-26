@@ -29,44 +29,47 @@ public class Principal extends javax.swing.JFrame {
 
         jMenuBar2 = new javax.swing.JMenuBar();
         jMenu4 = new javax.swing.JMenu();
-        jMenuItem10 = new javax.swing.JMenuItem();
-        jMenuItem11 = new javax.swing.JMenuItem();
         jSeparator3 = new javax.swing.JPopupMenu.Separator();
-        jMenuItem7 = new javax.swing.JMenuItem();
-        jMenuItem8 = new javax.swing.JMenuItem();
-        jSeparator2 = new javax.swing.JPopupMenu.Separator();
-        jMenuItem9 = new javax.swing.JMenuItem();
-        jMenu3 = new javax.swing.JMenu();
         jMenuItem6 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
-        jSeparator1 = new javax.swing.JPopupMenu.Separator();
+        jSeparator4 = new javax.swing.JPopupMenu.Separator();
+        jMenuItem7 = new javax.swing.JMenuItem();
+        jMenuItem8 = new javax.swing.JMenuItem();
+        jMenu3 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
         jMenuItem5 = new javax.swing.JMenuItem();
+        jSeparator5 = new javax.swing.JPopupMenu.Separator();
+        jMenuItem10 = new javax.swing.JMenuItem();
+        jMenuItem11 = new javax.swing.JMenuItem();
+        jMenu1 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(250, 251, 252));
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         jMenuBar2.setBackground(new java.awt.Color(255, 255, 255));
         jMenuBar2.setForeground(new java.awt.Color(255, 255, 255));
         jMenuBar2.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
 
-        jMenu4.setText("Archivo");
+        jMenu4.setText("Comandantes");
+        jMenu4.add(jSeparator3);
 
-        jMenuItem10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/media-floppy.png"))); // NOI18N
-        jMenuItem10.setText("Guardar Archivo de Plazas");
-        jMenu4.add(jMenuItem10);
-
-        jMenuItem11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/folder-blue-print.png"))); // NOI18N
-        jMenuItem11.setText("Abrir Archivo de Plazas");
-        jMenuItem11.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItem6.setText("Ingresar Comandante");
+        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem11ActionPerformed(evt);
+                jMenuItem6ActionPerformed(evt);
             }
         });
-        jMenu4.add(jMenuItem11);
-        jMenu4.add(jSeparator3);
+        jMenu4.add(jMenuItem6);
+
+        jMenuItem2.setText("Ver Comandantes");
+        jMenu4.add(jMenuItem2);
+
+        jMenuItem3.setText("Modificar Comandantes");
+        jMenu4.add(jMenuItem3);
+        jMenu4.add(jSeparator4);
 
         jMenuItem7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/media-floppy.png"))); // NOI18N
         jMenuItem7.setText("Guardar Archivo de Comandantes");
@@ -85,30 +88,10 @@ public class Principal extends javax.swing.JFrame {
             }
         });
         jMenu4.add(jMenuItem8);
-        jMenu4.add(jSeparator2);
-
-        jMenuItem9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/exit.png"))); // NOI18N
-        jMenuItem9.setText("Salir");
-        jMenu4.add(jMenuItem9);
 
         jMenuBar2.add(jMenu4);
 
-        jMenu3.setText("Acciones");
-
-        jMenuItem6.setText("Ingresar Comandante");
-        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem6ActionPerformed(evt);
-            }
-        });
-        jMenu3.add(jMenuItem6);
-
-        jMenuItem2.setText("Ver Comandantes");
-        jMenu3.add(jMenuItem2);
-
-        jMenuItem3.setText("Modificar Comandantes");
-        jMenu3.add(jMenuItem3);
-        jMenu3.add(jSeparator1);
+        jMenu3.setText("Plazas");
 
         jMenuItem1.setText("Ingresar Plaza");
         jMenu3.add(jMenuItem1);
@@ -118,8 +101,25 @@ public class Principal extends javax.swing.JFrame {
 
         jMenuItem5.setText("Modificar Plazas");
         jMenu3.add(jMenuItem5);
+        jMenu3.add(jSeparator5);
+
+        jMenuItem10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/media-floppy.png"))); // NOI18N
+        jMenuItem10.setText("Guardar Archivo de Plazas");
+        jMenu3.add(jMenuItem10);
+
+        jMenuItem11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/folder-blue-print.png"))); // NOI18N
+        jMenuItem11.setText("Abrir Archivo de Plazas");
+        jMenuItem11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem11ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem11);
 
         jMenuBar2.add(jMenu3);
+
+        jMenu1.setText("Ordenes");
+        jMenuBar2.add(jMenu1);
 
         setJMenuBar(jMenuBar2);
 
@@ -189,6 +189,7 @@ public class Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenuBar jMenuBar2;
@@ -202,9 +203,8 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JMenuItem jMenuItem8;
-    private javax.swing.JMenuItem jMenuItem9;
-    private javax.swing.JPopupMenu.Separator jSeparator1;
-    private javax.swing.JPopupMenu.Separator jSeparator2;
     private javax.swing.JPopupMenu.Separator jSeparator3;
+    private javax.swing.JPopupMenu.Separator jSeparator4;
+    private javax.swing.JPopupMenu.Separator jSeparator5;
     // End of variables declaration//GEN-END:variables
 }
