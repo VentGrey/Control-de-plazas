@@ -5,12 +5,16 @@
  */
 package Graficas;
 
+import MisClases.Comandante;
+import java.util.ArrayList;
+
 /**
  *
  * @author omar
  */
 public class Principal extends javax.swing.JFrame {
 
+    ArrayList<Comandante> datos = new ArrayList<>();
     /**
      * Creates new form Principal
      */
@@ -56,6 +60,7 @@ public class Principal extends javax.swing.JFrame {
         jMenu4.setText("Comandantes");
         jMenu4.add(jSeparator3);
 
+        jMenuItem6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/capture.png"))); // NOI18N
         jMenuItem6.setText("Ingresar Comandante");
         jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -64,9 +69,11 @@ public class Principal extends javax.swing.JFrame {
         });
         jMenu4.add(jMenuItem6);
 
+        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/view.png"))); // NOI18N
         jMenuItem2.setText("Ver Comandantes");
         jMenu4.add(jMenuItem2);
 
+        jMenuItem3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/modify.png"))); // NOI18N
         jMenuItem3.setText("Modificar Comandantes");
         jMenu4.add(jMenuItem3);
         jMenu4.add(jSeparator4);
@@ -93,12 +100,15 @@ public class Principal extends javax.swing.JFrame {
 
         jMenu3.setText("Plazas");
 
+        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/capture.png"))); // NOI18N
         jMenuItem1.setText("Ingresar Plaza");
         jMenu3.add(jMenuItem1);
 
+        jMenuItem4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/view.png"))); // NOI18N
         jMenuItem4.setText("Ver Plazas");
         jMenu3.add(jMenuItem4);
 
+        jMenuItem5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/modify.png"))); // NOI18N
         jMenuItem5.setText("Modificar Plazas");
         jMenu3.add(jMenuItem5);
         jMenu3.add(jSeparator5);

@@ -24,6 +24,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem6">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/Icons/capture.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Ingresar Comandante"/>
               </Properties>
               <Events>
@@ -32,11 +35,17 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem2">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/Icons/view.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Ver Comandantes"/>
               </Properties>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem3">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/Icons/modify.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Modificar Comandantes"/>
               </Properties>
             </MenuItem>
@@ -73,16 +82,25 @@
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem1">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/Icons/capture.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Ingresar Plaza"/>
               </Properties>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem4">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/Icons/view.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Ver Plazas"/>
               </Properties>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem5">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/Icons/modify.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Modificar Plazas"/>
               </Properties>
             </MenuItem>
