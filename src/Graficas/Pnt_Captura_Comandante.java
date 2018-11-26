@@ -7,6 +7,7 @@ package Graficas;
 
 import MisClases.Comandante;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -53,8 +54,6 @@ public class Pnt_Captura_Comandante extends javax.swing.JInternalFrame {
         btn_save = new javax.swing.JButton();
 
         setClosable(true);
-        setMaximizable(true);
-        setResizable(true);
         setTitle("Registro de Comandantes");
 
         jLabel2.setText("Número de Cédula:");
@@ -110,23 +109,26 @@ public class Pnt_Captura_Comandante extends javax.swing.JInternalFrame {
                     .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(txt_esp, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
+                    .addComponent(txt_ape, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txt_nom, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txt_ced, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txt_ant))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(txt_esp, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
-                            .addComponent(txt_ape, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txt_nom, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txt_ced, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txt_ant))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel7)
-                            .addComponent(jLabel8)
                             .addComponent(jLabel9)
                             .addComponent(jLabel10)
-                            .addComponent(jLabel1)))
-                    .addComponent(btn_save, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(233, Short.MAX_VALUE))
+                            .addComponent(jLabel1))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel8)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btn_save, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -156,9 +158,9 @@ public class Pnt_Captura_Comandante extends javax.swing.JInternalFrame {
                     .addComponent(jLabel6)
                     .addComponent(txt_ant)
                     .addComponent(jLabel1))
-                .addGap(63, 63, 63)
-                .addComponent(btn_save, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(80, 80, 80))
+                .addGap(18, 18, 18)
+                .addComponent(btn_save, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(227, 227, 227))
         );
 
         pack();
@@ -173,6 +175,7 @@ public class Pnt_Captura_Comandante extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_txt_nomActionPerformed
 
     private void btn_saveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_saveActionPerformed
+        try {
         Integer Cedula = Integer.valueOf(txt_ced.getText());
         String Nombre = txt_nom.getText();
         String Apaterno = txt_ape.getText();
@@ -186,7 +189,11 @@ public class Pnt_Captura_Comandante extends javax.swing.JInternalFrame {
         txt_ced.setText("");
         txt_nom.setText("");
         txt_ape.setText("");
+        txt_esp.setText("");
         txt_ant.setText("");
+        } catch(NumberFormatException e ) {
+                JOptionPane.showMessageDialog(null, "¿ES PENDEJO? LE DIJE Números >:V");
+        } 
     }//GEN-LAST:event_btn_saveActionPerformed
 
 
