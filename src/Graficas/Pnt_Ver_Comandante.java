@@ -89,12 +89,32 @@ public class Pnt_Ver_Comandante extends javax.swing.JInternalFrame {
         et_ant.setText("**********");
 
         btn_fondo.setText("|<");
+        btn_fondo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_fondoActionPerformed(evt);
+            }
+        });
 
         btn_atras.setText("<<");
+        btn_atras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_atrasActionPerformed(evt);
+            }
+        });
 
         btn_adelante.setText(">>");
+        btn_adelante.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_adelanteActionPerformed(evt);
+            }
+        });
 
         btn_arriba.setText(">|");
+        btn_arriba.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_arribaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -170,6 +190,30 @@ public class Pnt_Ver_Comandante extends javax.swing.JInternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btn_fondoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_fondoActionPerformed
+        posicion = 0;
+        cargar(posicion);
+    }//GEN-LAST:event_btn_fondoActionPerformed
+
+    private void btn_atrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_atrasActionPerformed
+        if((posicion -1) >= 0) {
+            this.posicion--;
+            cargar(posicion);
+        }
+    }//GEN-LAST:event_btn_atrasActionPerformed
+
+    private void btn_adelanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_adelanteActionPerformed
+        if((posicion + 1 ) < this.datos.size()) {
+            this.posicion++;
+            cargar(posicion);
+        }
+    }//GEN-LAST:event_btn_adelanteActionPerformed
+
+    private void btn_arribaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_arribaActionPerformed
+        posicion = this.datos.size()-1;
+        cargar(posicion);
+    }//GEN-LAST:event_btn_arribaActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
