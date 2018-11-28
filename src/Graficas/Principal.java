@@ -250,7 +250,7 @@ public class Principal extends javax.swing.JFrame {
             }
             lector.close();
             
-            JOptionPane.showMessageDialog(null, "Archivo guardado uwu");
+            JOptionPane.showMessageDialog(null, "Archivo cargado uwu");
             
         } catch(FileNotFoundException e) {
             JOptionPane.showMessageDialog(null, "AAAAAAAA nosta el archivo D:");
@@ -283,7 +283,7 @@ public class Principal extends javax.swing.JFrame {
             }
             lector.close();
             
-            JOptionPane.showMessageDialog(null, "Archivo guardado uwu");
+            JOptionPane.showMessageDialog(null, "Archivo cargado uwu");
             
         } catch(FileNotFoundException e) {
             JOptionPane.showMessageDialog(null, "AAAAAAAA nosta el archivo D:");

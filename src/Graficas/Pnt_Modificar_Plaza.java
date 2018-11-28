@@ -155,6 +155,11 @@ public class Pnt_Modificar_Plaza extends javax.swing.JInternalFrame {
         int index = jComboBox1.getSelectedIndex();
         Plaza temp = datos.get(index);
         
+        txt_ID.setText(String.valueOf(temp.getIdPlaza()));
+        txt_nombre.setText(temp.getNombre());
+        txt_ciudad.setText(temp.getCiudad());
+        txt_pol.setText(String.valueOf(temp.getPolicias()));
+        txt_NPC.setText(String.valueOf(temp.getNPC()));
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
