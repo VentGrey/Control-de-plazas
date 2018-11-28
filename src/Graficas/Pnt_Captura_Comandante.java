@@ -177,12 +177,50 @@ public class Pnt_Captura_Comandante extends javax.swing.JInternalFrame {
     private void btn_saveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_saveActionPerformed
         try {
         Integer Cedula = Integer.valueOf(txt_ced.getText());
+        
+        int flag = 0;
+        
         String Nombre = txt_nom.getText();
+        if(Nombre.length() > 15) {
+            JOptionPane.showMessageDialog(null, "El nombre excede los 15 carácteres");
+            flag += 1;
+        }
+        if(Nombre.length() < 1) {
+            JOptionPane.showMessageDialog(null, "._. mínimo escribe algo");
+            flag += 1;
+        }
+        
         String Apaterno = txt_ape.getText();
+        if(Apaterno.length() > 15) {
+            JOptionPane.showMessageDialog(null, "El nombre excede los 15 carácteres");
+            flag += 1;
+        }
+        if(Apaterno.length() < 1) {
+            JOptionPane.showMessageDialog(null, "._. mínimo escribe algo");
+            flag += 1;
+        }
         String Especialidad = txt_esp.getText();
+        if(Especialidad.length() > 15) {
+            JOptionPane.showMessageDialog(null, "El nombre excede los 15 carácteres");
+            flag += 1;
+        }
+        if(Especialidad.length() < 1) {
+            JOptionPane.showMessageDialog(null, "._. mínimo escribe algo");
+            flag += 1;
+        }
         Integer Antiguedad = Integer.valueOf(txt_ant.getText());
         
         Comandante c = new Comandante(Cedula);
+        
+        if(flag != 0) {
+            JOptionPane.showMessageDialog(null, "Corrija los campos erróneos");
+            txt_ced.setText("");
+            txt_nom.setText("");
+            txt_ape.setText("");
+            txt_esp.setText("");
+            txt_ant.setText("");
+        }
+        
         c.setNombre(Nombre);
         c.setApaterno(Apaterno);
         c.setEspecialidad(Especialidad);
@@ -195,6 +233,8 @@ public class Pnt_Captura_Comandante extends javax.swing.JInternalFrame {
         txt_ape.setText("");
         txt_esp.setText("");
         txt_ant.setText("");
+       
+        
         } catch(NumberFormatException e ) {
                 JOptionPane.showMessageDialog(null, "Dije Números >:V");
         } 
