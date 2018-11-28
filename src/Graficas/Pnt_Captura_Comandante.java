@@ -192,7 +192,7 @@ public class Pnt_Captura_Comandante extends javax.swing.JInternalFrame {
         txt_esp.setText("");
         txt_ant.setText("");
         } catch(NumberFormatException e ) {
-                JOptionPane.showMessageDialog(null, "¿ES PENDEJO? LE DIJE Números >:V");
+                JOptionPane.showMessageDialog(null, "Dije Números >:V");
         } 
     }//GEN-LAST:event_btn_saveActionPerformed
 

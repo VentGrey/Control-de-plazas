@@ -54,7 +54,7 @@ Plazas de Seguridad y Ordenes a Comandantes.
 ## Ponderación (TODO):
 
 - [x] Validación de todos los campos en las altas de catálogos (5pts).
-- [ ] Pantallas Funcionales para Altas, Bajas y Modificaciones de registros de COMANDANTES (15pts). 5pts cada una
+- [x] Pantallas Funcionales para Altas, Bajas y Modificaciones de registros de COMANDANTES (15pts). 5pts cada una
 - [ ] Pantallas Funcionales para Altas, Bajas y Modificaciones de registros de PLAZAS (15pts). 5pts cada una
 - [ ] Pantalla Funcional para la Búsqueda de Comandante por Nombre (10 pts).
 - [ ] Pantalla Funcional para la Búsqueda de Plaza por Nombre (5 pts).

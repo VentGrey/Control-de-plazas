@@ -34,11 +34,11 @@
               </Group>
               <EmptySpace min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                  <Component id="txt_esp" pref="111" max="32767" attributes="0"/>
-                  <Component id="txt_ape" alignment="0" max="32767" attributes="0"/>
+                  <Component id="txt_pol" pref="111" max="32767" attributes="0"/>
+                  <Component id="txt_cid" alignment="0" max="32767" attributes="0"/>
                   <Component id="txt_nom" alignment="0" max="32767" attributes="0"/>
-                  <Component id="txt_ced" alignment="0" max="32767" attributes="0"/>
-                  <Component id="txt_ant" max="32767" attributes="0"/>
+                  <Component id="txt_pla" alignment="0" max="32767" attributes="0"/>
+                  <Component id="txt_pob" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -67,7 +67,7 @@
               <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel2" alignment="3" max="32767" attributes="0"/>
-                  <Component id="txt_ced" alignment="3" max="32767" attributes="0"/>
+                  <Component id="txt_pla" alignment="3" max="32767" attributes="0"/>
                   <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
@@ -79,19 +79,19 @@
               <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txt_ape" alignment="3" max="32767" attributes="0"/>
+                  <Component id="txt_cid" alignment="3" max="32767" attributes="0"/>
                   <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txt_esp" alignment="3" max="32767" attributes="0"/>
+                  <Component id="txt_pol" alignment="3" max="32767" attributes="0"/>
                   <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txt_ant" alignment="3" max="32767" attributes="0"/>
+                  <Component id="txt_pob" alignment="3" max="32767" attributes="0"/>
                   <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -104,7 +104,7 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
-        <Property name="text" type="java.lang.String" value="N&#xfa;mero de C&#xe9;dula:"/>
+        <Property name="text" type="java.lang.String" value="N&#xfa;mero de Plaza:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
@@ -114,22 +114,22 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel4">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Apellido Paterno:"/>
+        <Property name="text" type="java.lang.String" value="Ciudad:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel5">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Especialidad:"/>
+        <Property name="text" type="java.lang.String" value="Polic&#xed;as:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel6">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Antiguedad:"/>
+        <Property name="text" type="java.lang.String" value="No. Poblaci&#xf3;n Civil:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txt_ced">
+    <Component class="javax.swing.JTextField" name="txt_pla">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_cedActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_plaActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txt_nom">
@@ -137,11 +137,11 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_nomActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="txt_ape">
+    <Component class="javax.swing.JTextField" name="txt_cid">
     </Component>
-    <Component class="javax.swing.JTextField" name="txt_esp">
+    <Component class="javax.swing.JTextField" name="txt_pol">
     </Component>
-    <Component class="javax.swing.JTextField" name="txt_ant">
+    <Component class="javax.swing.JTextField" name="txt_pob">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel7">
       <Properties>

@@ -5,7 +5,7 @@
  */
 package Graficas;
 
-import MisClases.Comandante;
+import MisClases.Plaza;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
@@ -15,9 +15,9 @@ import javax.swing.JOptionPane;
  */
 public class Pnt_Captura_Plaza extends javax.swing.JInternalFrame {
 
-    ArrayList<Comandante> datos = null;
+    ArrayList<Plaza> datos = null;
     
-    public void setDatos(ArrayList<Comandante> datos) {
+    public void setDatos(ArrayList<Plaza> datos) {
         this.datos = datos;
     }
     /**
@@ -41,11 +41,11 @@ public class Pnt_Captura_Plaza extends javax.swing.JInternalFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        txt_ced = new javax.swing.JTextField();
+        txt_pla = new javax.swing.JTextField();
         txt_nom = new javax.swing.JTextField();
-        txt_ape = new javax.swing.JTextField();
-        txt_esp = new javax.swing.JTextField();
-        txt_ant = new javax.swing.JTextField();
+        txt_cid = new javax.swing.JTextField();
+        txt_pol = new javax.swing.JTextField();
+        txt_pob = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
@@ -56,19 +56,19 @@ public class Pnt_Captura_Plaza extends javax.swing.JInternalFrame {
         setClosable(true);
         setTitle("Registro de Comandantes");
 
-        jLabel2.setText("Número de Cédula:");
+        jLabel2.setText("Número de Plaza:");
 
         jLabel3.setText("Nombre (s):");
 
-        jLabel4.setText("Apellido Paterno:");
+        jLabel4.setText("Ciudad:");
 
-        jLabel5.setText("Especialidad:");
+        jLabel5.setText("Policías:");
 
-        jLabel6.setText("Antiguedad:");
+        jLabel6.setText("No. Población Civil:");
 
-        txt_ced.addActionListener(new java.awt.event.ActionListener() {
+        txt_pla.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_cedActionPerformed(evt);
+                txt_plaActionPerformed(evt);
             }
         });
 
@@ -110,11 +110,11 @@ public class Pnt_Captura_Plaza extends javax.swing.JInternalFrame {
                     .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(txt_esp, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
-                    .addComponent(txt_ape, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txt_pol, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
+                    .addComponent(txt_cid, javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txt_nom, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txt_ced, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txt_ant))
+                    .addComponent(txt_pla, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txt_pob))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -136,7 +136,7 @@ public class Pnt_Captura_Plaza extends javax.swing.JInternalFrame {
                 .addGap(54, 54, 54)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txt_ced)
+                    .addComponent(txt_pla)
                     .addComponent(jLabel10))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -146,17 +146,17 @@ public class Pnt_Captura_Plaza extends javax.swing.JInternalFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(txt_ape)
+                    .addComponent(txt_cid)
                     .addComponent(jLabel8))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(txt_esp)
+                    .addComponent(txt_pol)
                     .addComponent(jLabel9))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
-                    .addComponent(txt_ant)
+                    .addComponent(txt_pob)
                     .addComponent(jLabel1))
                 .addGap(18, 18, 18)
                 .addComponent(btn_save, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -166,9 +166,9 @@ public class Pnt_Captura_Plaza extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txt_cedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_cedActionPerformed
+    private void txt_plaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_plaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txt_cedActionPerformed
+    }//GEN-LAST:event_txt_plaActionPerformed
 
     private void txt_nomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_nomActionPerformed
         // TODO add your handling code here:
@@ -176,23 +176,27 @@ public class Pnt_Captura_Plaza extends javax.swing.JInternalFrame {
 
     private void btn_saveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_saveActionPerformed
         try {
-        Integer Cedula = Integer.valueOf(txt_ced.getText());
+        String IdPlaza = txt_pla.getText();
         String Nombre = txt_nom.getText();
-        String Apaterno = txt_ape.getText();
-        Integer Antiguedad = Integer.valueOf(txt_ant.getText());
+        String Ciudad = txt_cid.getText();
+        Integer Policias = Integer.valueOf(txt_pol.getText());
+        Integer NPC = Integer.valueOf(txt_pob.getText());
+
+        Plaza p = new Plaza(IdPlaza);
+        p.setNombre(Nombre);
+        p.setCiudad(Ciudad);
+        p.setPolicias(Policias);
+        p.setNPC(NPC);
         
-        Comandante c = new Comandante(Cedula);
-        c.setAntiguedad(Antiguedad);
+        this.datos.add(p);
         
-        this.datos.add(c);
-        
-        txt_ced.setText("");
+        txt_pla.setText("");
         txt_nom.setText("");
-        txt_ape.setText("");
-        txt_esp.setText("");
-        txt_ant.setText("");
+        txt_cid.setText("");
+        txt_pol.setText("");
+        txt_pob.setText("");
         } catch(NumberFormatException e ) {
-                JOptionPane.showMessageDialog(null, "¿ES PENDEJO? LE DIJE Números >:V");
+                JOptionPane.showMessageDialog(null, "Dije Números >:V");
         } 
     }//GEN-LAST:event_btn_saveActionPerformed
 
@@ -209,10 +213,10 @@ public class Pnt_Captura_Plaza extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JTextField txt_ant;
-    private javax.swing.JTextField txt_ape;
-    private javax.swing.JTextField txt_ced;
-    private javax.swing.JTextField txt_esp;
+    private javax.swing.JTextField txt_cid;
     private javax.swing.JTextField txt_nom;
+    private javax.swing.JTextField txt_pla;
+    private javax.swing.JTextField txt_pob;
+    private javax.swing.JTextField txt_pol;
     // End of variables declaration//GEN-END:variables
 }
