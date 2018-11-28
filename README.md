@@ -53,15 +53,15 @@ Plazas de Seguridad y Ordenes a Comandantes.
 
 ## Ponderación (TODO):
 
-~~- [x] Validación de todos los campos en las altas de catálogos (5pts).
-- [x] Pantallas Funcionales para Altas, Bajas y Modificaciones de registros de COMANDANTES (15pts). 5pts cada una
-- [x] Pantallas Funcionales para Altas, Bajas y Modificaciones de registros de PLAZAS (15pts). 5pts cada una
-- [ ] Pantalla Funcional para la Búsqueda de Comandante por Nombre (10 pts).
-- [ ] Pantalla Funcional para la Búsqueda de Plaza por Nombre (5 pts).
-- [ ] Pantalla Funcional para la Búsqueda de Plaza por IDPlaza (5 pts.)
-- [x] Funcionalidad de creación de archivo de texto de COMANDANTES (5pts).
-- [x] Funcionalidad de creación de archivo de texto de PLAZAS (5pts).
-- [x] Funcionalidad de lectura de archivo de texto de COMANDANTES para reconstrucción del mismo (5pts)
-- [x] Funcionalidad de lectura de archivo de texto de PLAZAS para reconstrucción del mismo (5pts)
-- [ ] Funcionalidad de pantalla de ORDENES y generación escrita de la Orden para el comandante (15 pts.)
-- [ ] Creación de reporte TXT con total de las ORDENES hechas durante el ciclo del programa (10 pts).~~
+~~- [x] Validación de todos los campos en las altas de catálogos (5pts).~~
+~~[x] Pantallas Funcionales para Altas, Bajas y Modificaciones de registros de COMANDANTES (15pts). 5pts cada una~~
+~~[x] Pantallas Funcionales para Altas, Bajas y Modificaciones de registros de PLAZAS (15pts). 5pts cada una~~
+~~[ ] Pantalla Funcional para la Búsqueda de Comandante por Nombre (10 pts).~~
+~~[ ] Pantalla Funcional para la Búsqueda de Plaza por Nombre (5 pts).~~
+~~[ ] Pantalla Funcional para la Búsqueda de Plaza por IDPlaza (5 pts.)~~
+~~[x] Funcionalidad de creación de archivo de texto de COMANDANTES (5pts).~~
+~~[x] Funcionalidad de creación de archivo de texto de PLAZAS (5pts).~~
+~~[x] Funcionalidad de lectura de archivo de texto de COMANDANTES para reconstrucción del mismo (5pts)~~
+~~[x] Funcionalidad de lectura de archivo de texto de PLAZAS para reconstrucción del mismo (5pts)~~
+~~[ ] Funcionalidad de pantalla de ORDENES y generación escrita de la Orden para el comandante (15 pts.)~~
+~~[ ] Creación de reporte TXT con total de las ORDENES hechas durante el ciclo del programa (10 pts).~~
