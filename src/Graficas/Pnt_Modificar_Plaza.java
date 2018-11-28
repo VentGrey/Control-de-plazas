@@ -13,14 +13,14 @@ import javax.swing.JOptionPane;
  *
  * @author omar
  */
-public class Pnt_Capturar_Comandante extends javax.swing.JInternalFrame {
+public class Pnt_Modificar_Plaza extends javax.swing.JInternalFrame {
 
     private ArrayList<Comandante> datos = null;
     
     /**
      * Creates new form Pnt_Capturar_Comandante
      */
-    public Pnt_Capturar_Comandante() {
+    public Pnt_Modificar_Plaza() {
         initComponents();
     }
 
