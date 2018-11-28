@@ -1,6 +1,6 @@
 package Graficas;
 
-import MisClases.Comandante;
+import MisClases.Plaza;
 import java.util.ArrayList;
 
 /*
@@ -15,21 +15,21 @@ import java.util.ArrayList;
  */
 public class Pnt_Ver_Plaza extends javax.swing.JInternalFrame {
 
-    ArrayList<Comandante> datos = null;
+    ArrayList<Plaza> datos = null;
     int posicion = 0;
 
-    public void setDatos(ArrayList<Comandante> datos) {
+    public void setDatos(ArrayList<Plaza> datos) {
         this.datos = datos;
         this.posicion = 0;
     }
     
     private void cargar (int indice) {
-        Comandante c = this.datos.get(indice);
-        et_ced.setText(String.valueOf(c.getCedula()));
-        et_nom.setText(c.getNombre());
-        et_ap.setText(c.getApaterno());
-        et_esp.setText(c.getEspecialidad());
-        et_ant.setText(String.valueOf(c.getAntiguedad()));
+        Plaza p = this.datos.get(indice);
+        et_Id.setText(p.getIdPlaza());
+        et_nom.setText(p.getNombre());
+        et_cd.setText(p.getCiudad());
+        et_pol.setText(String.valueOf(p.getPolicias()));
+        et_npc.setText(String.valueOf(p.getNPC()));
     }
     
     /**
@@ -53,11 +53,11 @@ public class Pnt_Ver_Plaza extends javax.swing.JInternalFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        et_ced = new javax.swing.JLabel();
+        et_Id = new javax.swing.JLabel();
         et_nom = new javax.swing.JLabel();
-        et_ap = new javax.swing.JLabel();
-        et_esp = new javax.swing.JLabel();
-        et_ant = new javax.swing.JLabel();
+        et_cd = new javax.swing.JLabel();
+        et_pol = new javax.swing.JLabel();
+        et_npc = new javax.swing.JLabel();
         btn_fondo = new javax.swing.JButton();
         btn_atras = new javax.swing.JButton();
         btn_adelante = new javax.swing.JButton();
@@ -66,27 +66,27 @@ public class Pnt_Ver_Plaza extends javax.swing.JInternalFrame {
         setClosable(true);
         setMaximizable(true);
         setResizable(true);
-        setTitle("Registro de comandantes");
+        setTitle("Registro de Plazas");
 
-        jLabel1.setText("Cédula:");
+        jLabel1.setText("ID:");
 
         jLabel2.setText("Nombre:");
 
-        jLabel3.setText("Apellido Paterno:");
+        jLabel3.setText("Ciudad:");
 
-        jLabel4.setText("Especialidad:");
+        jLabel4.setText("Policías:");
 
-        jLabel5.setText("Antiguedad:");
+        jLabel5.setText("No Población Civil:");
 
-        et_ced.setText("**********");
+        et_Id.setText("**********");
 
         et_nom.setText("**********");
 
-        et_ap.setText("**********");
+        et_cd.setText("**********");
 
-        et_esp.setText("**********");
+        et_pol.setText("**********");
 
-        et_ant.setText("**********");
+        et_npc.setText("**********");
 
         btn_fondo.setText("|<");
         btn_fondo.addActionListener(new java.awt.event.ActionListener() {
@@ -140,11 +140,11 @@ public class Pnt_Ver_Plaza extends javax.swing.JInternalFrame {
                                 .addGap(36, 36, 36)))
                         .addGap(29, 29, 29)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(et_ant, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(et_esp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(et_ap, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(et_npc, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(et_pol, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(et_cd, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(et_nom, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(et_ced, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(et_Id, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(46, 46, 46))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(btn_fondo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -162,7 +162,7 @@ public class Pnt_Ver_Plaza extends javax.swing.JInternalFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(et_ced, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(et_Id, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -170,15 +170,15 @@ public class Pnt_Ver_Plaza extends javax.swing.JInternalFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(et_ap, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(et_cd, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(et_esp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(et_pol, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(et_ant, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(et_npc, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(39, 39, 39)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_fondo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -221,11 +221,11 @@ public class Pnt_Ver_Plaza extends javax.swing.JInternalFrame {
     private javax.swing.JButton btn_arriba;
     private javax.swing.JButton btn_atras;
     private javax.swing.JButton btn_fondo;
-    private javax.swing.JLabel et_ant;
-    private javax.swing.JLabel et_ap;
-    private javax.swing.JLabel et_ced;
-    private javax.swing.JLabel et_esp;
+    private javax.swing.JLabel et_Id;
+    private javax.swing.JLabel et_cd;
     private javax.swing.JLabel et_nom;
+    private javax.swing.JLabel et_npc;
+    private javax.swing.JLabel et_pol;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

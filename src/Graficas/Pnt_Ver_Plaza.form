@@ -5,7 +5,7 @@
     <Property name="closable" type="boolean" value="true"/>
     <Property name="maximizable" type="boolean" value="true"/>
     <Property name="resizable" type="boolean" value="true"/>
-    <Property name="title" type="java.lang.String" value="Registro de comandantes"/>
+    <Property name="title" type="java.lang.String" value="Registro de Plazas"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -50,11 +50,11 @@
                       </Group>
                       <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="et_ant" max="32767" attributes="0"/>
-                          <Component id="et_esp" max="32767" attributes="0"/>
-                          <Component id="et_ap" max="32767" attributes="0"/>
+                          <Component id="et_npc" max="32767" attributes="0"/>
+                          <Component id="et_pol" max="32767" attributes="0"/>
+                          <Component id="et_cd" max="32767" attributes="0"/>
                           <Component id="et_nom" max="32767" attributes="0"/>
-                          <Component id="et_ced" max="32767" attributes="0"/>
+                          <Component id="et_Id" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
                   </Group>
@@ -78,7 +78,7 @@
               <EmptySpace min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="et_ced" alignment="3" max="32767" attributes="0"/>
+                  <Component id="et_Id" alignment="3" max="32767" attributes="0"/>
               </Group>
               <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -88,17 +88,17 @@
               <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel3" alignment="3" max="32767" attributes="0"/>
-                  <Component id="et_ap" alignment="3" max="32767" attributes="0"/>
+                  <Component id="et_cd" alignment="3" max="32767" attributes="0"/>
               </Group>
               <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel4" alignment="3" max="32767" attributes="0"/>
-                  <Component id="et_esp" alignment="3" max="32767" attributes="0"/>
+                  <Component id="et_pol" alignment="3" max="32767" attributes="0"/>
               </Group>
               <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel5" alignment="3" max="32767" attributes="0"/>
-                  <Component id="et_ant" alignment="3" max="32767" attributes="0"/>
+                  <Component id="et_npc" alignment="3" max="32767" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -115,7 +115,7 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="C&#xe9;dula:"/>
+        <Property name="text" type="java.lang.String" value="ID:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
@@ -125,20 +125,20 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Apellido Paterno:"/>
+        <Property name="text" type="java.lang.String" value="Ciudad:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel4">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Especialidad:"/>
+        <Property name="text" type="java.lang.String" value="Polic&#xed;as:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel5">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Antiguedad:"/>
+        <Property name="text" type="java.lang.String" value="No Poblaci&#xf3;n Civil:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="et_ced">
+    <Component class="javax.swing.JLabel" name="et_Id">
       <Properties>
         <Property name="text" type="java.lang.String" value="**********"/>
       </Properties>
@@ -148,17 +148,17 @@
         <Property name="text" type="java.lang.String" value="**********"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="et_ap">
+    <Component class="javax.swing.JLabel" name="et_cd">
       <Properties>
         <Property name="text" type="java.lang.String" value="**********"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="et_esp">
+    <Component class="javax.swing.JLabel" name="et_pol">
       <Properties>
         <Property name="text" type="java.lang.String" value="**********"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="et_ant">
+    <Component class="javax.swing.JLabel" name="et_npc">
       <Properties>
         <Property name="text" type="java.lang.String" value="**********"/>
       </Properties>

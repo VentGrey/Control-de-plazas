@@ -5,7 +5,7 @@
  */
 package Graficas;
 
-import MisClases.Comandante;
+import MisClases.Plaza;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
@@ -15,7 +15,7 @@ import javax.swing.JOptionPane;
  */
 public class Pnt_Modificar_Plaza extends javax.swing.JInternalFrame {
 
-    private ArrayList<Comandante> datos = null;
+    private ArrayList<Plaza> datos = null;
     
     /**
      * Creates new form Pnt_Capturar_Comandante
@@ -24,7 +24,7 @@ public class Pnt_Modificar_Plaza extends javax.swing.JInternalFrame {
         initComponents();
     }
 
-    public void setDatos(ArrayList<Comandante> datos) {
+    public void setDatos(ArrayList<Plaza> datos) {
         this.datos = datos;
         jComboBox1.removeAllItems();
         
@@ -65,17 +65,17 @@ public class Pnt_Modificar_Plaza extends javax.swing.JInternalFrame {
             }
         });
 
-        jLabel1.setText("Cédula:");
+        jLabel1.setText("ID:");
 
-        jLabel2.setText("Especialidad:");
+        jLabel2.setText("Policías:");
 
         jLabel3.setText("Nombre:");
 
-        jLabel4.setText("Apellido:");
+        jLabel4.setText("Ciudad:");
 
-        txt_ced.setText("CÉDULA");
+        txt_ced.setText("ID");
 
-        jLabel6.setText("Antiguedad:");
+        jLabel6.setText("No. Población Civil:");
 
         jButton2.setText("Modificar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -107,12 +107,11 @@ public class Pnt_Modificar_Plaza extends javax.swing.JInternalFrame {
                         .addGap(57, 57, 57)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jTextField1)
-                                .addComponent(jTextField2)
-                                .addComponent(jTextField3)
-                                .addComponent(jTextField4, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)))))
-                .addContainerGap(185, Short.MAX_VALUE))
+                            .addComponent(jTextField1)
+                            .addComponent(jTextField2)
+                            .addComponent(jTextField3)
+                            .addComponent(jTextField4, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE))))
+                .addContainerGap(145, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -151,20 +150,20 @@ public class Pnt_Modificar_Plaza extends javax.swing.JInternalFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         int index = jComboBox1.getSelectedIndex();
-        Comandante temp = datos.get(index);
+        Plaza temp = datos.get(index);
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         int index = jComboBox1.getSelectedIndex();
-        Comandante original = datos.get(index);
-        Integer Cedula = Integer.valueOf(txt_ced.getText());
+        Plaza original = datos.get(index);
+        String IdPlaza = txt_ced.getText());
         String Nombre = original.getNombre();
         String Apaterno = original.getApaterno();
         String Especialidad = original.getEspecialidad();
         Integer Antiguedad = Integer.valueOf(txt_ced.getText());
         
-        Comandante nuevo = new Comandante(Cedula);
+        Plaza nuevo = new Comandante(Cedula);
         
         nuevo.setNombre(Nombre);
         nuevo.setApaterno(Apaterno);
