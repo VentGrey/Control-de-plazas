@@ -42,6 +42,13 @@ public class Principal extends javax.swing.JFrame {
 
         jDesktopPane1 = new javax.swing.JDesktopPane();
         jMenuBar2 = new javax.swing.JMenuBar();
+        jMenu3 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem4 = new javax.swing.JMenuItem();
+        jMenuItem5 = new javax.swing.JMenuItem();
+        jSeparator5 = new javax.swing.JPopupMenu.Separator();
+        jMenuItem10 = new javax.swing.JMenuItem();
+        jMenuItem11 = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
         jSeparator3 = new javax.swing.JPopupMenu.Separator();
         cap_comand = new javax.swing.JMenuItem();
@@ -50,13 +57,8 @@ public class Principal extends javax.swing.JFrame {
         jSeparator4 = new javax.swing.JPopupMenu.Separator();
         save_com = new javax.swing.JMenuItem();
         open_com = new javax.swing.JMenuItem();
-        jMenu3 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
-        jMenuItem5 = new javax.swing.JMenuItem();
-        jSeparator5 = new javax.swing.JPopupMenu.Separator();
-        jMenuItem10 = new javax.swing.JMenuItem();
-        jMenuItem11 = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+        jMenuItem2 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(250, 251, 252));
@@ -75,6 +77,56 @@ public class Principal extends javax.swing.JFrame {
 
         jMenuBar2.setForeground(new java.awt.Color(255, 255, 255));
         jMenuBar2.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+
+        jMenu3.setText("Plazas");
+
+        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/capture.png"))); // NOI18N
+        jMenuItem1.setText("Ingresar Plaza");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem1);
+
+        jMenuItem4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/view.png"))); // NOI18N
+        jMenuItem4.setText("Ver Plazas");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem4);
+
+        jMenuItem5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/modify.png"))); // NOI18N
+        jMenuItem5.setText("Modificar Plazas");
+        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem5ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem5);
+        jMenu3.add(jSeparator5);
+
+        jMenuItem10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/media-floppy.png"))); // NOI18N
+        jMenuItem10.setText("Guardar Archivo de Plazas");
+        jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem10ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem10);
+
+        jMenuItem11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/folder-blue-print.png"))); // NOI18N
+        jMenuItem11.setText("Abrir Archivo de Plazas");
+        jMenuItem11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem11ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem11);
+
+        jMenuBar2.add(jMenu3);
 
         jMenu4.setText("Comandantes");
         jMenu4.add(jSeparator3);
@@ -127,55 +179,17 @@ public class Principal extends javax.swing.JFrame {
 
         jMenuBar2.add(jMenu4);
 
-        jMenu3.setText("Plazas");
+        jMenu2.setText("Orden");
 
-        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/capture.png"))); // NOI18N
-        jMenuItem1.setText("Ingresar Plaza");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItem2.setText("Emitir Orden");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                jMenuItem2ActionPerformed(evt);
             }
         });
-        jMenu3.add(jMenuItem1);
+        jMenu2.add(jMenuItem2);
 
-        jMenuItem4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/view.png"))); // NOI18N
-        jMenuItem4.setText("Ver Plazas");
-        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem4ActionPerformed(evt);
-            }
-        });
-        jMenu3.add(jMenuItem4);
-
-        jMenuItem5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/modify.png"))); // NOI18N
-        jMenuItem5.setText("Modificar Plazas");
-        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem5ActionPerformed(evt);
-            }
-        });
-        jMenu3.add(jMenuItem5);
-        jMenu3.add(jSeparator5);
-
-        jMenuItem10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/media-floppy.png"))); // NOI18N
-        jMenuItem10.setText("Guardar Archivo de Plazas");
-        jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem10ActionPerformed(evt);
-            }
-        });
-        jMenu3.add(jMenuItem10);
-
-        jMenuItem11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/folder-blue-print.png"))); // NOI18N
-        jMenuItem11.setText("Abrir Archivo de Plazas");
-        jMenuItem11.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem11ActionPerformed(evt);
-            }
-        });
-        jMenu3.add(jMenuItem11);
-
-        jMenuBar2.add(jMenu3);
+        jMenuBar2.add(jMenu2);
 
         setJMenuBar(jMenuBar2);
 
@@ -345,6 +359,11 @@ public class Principal extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jMenuItem10ActionPerformed
 
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+    
+        
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
 
 
     /**
@@ -386,12 +405,14 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenuItem cap_comand;
     private javax.swing.JMenuItem edit_coman;
     private javax.swing.JDesktopPane jDesktopPane1;
+    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem10;
     private javax.swing.JMenuItem jMenuItem11;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JPopupMenu.Separator jSeparator3;

@@ -176,12 +176,47 @@ public class Pnt_Captura_Plaza extends javax.swing.JInternalFrame {
 
     private void btn_saveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_saveActionPerformed
         try {
-        String IdPlaza = txt_pla.getText();
-        String Nombre = txt_nom.getText();
-        String Ciudad = txt_cid.getText();
+            int flag = 0;
+            
+            String IdPlaza = txt_pla.getText();
+            if(IdPlaza.length() > 15) {
+                JOptionPane.showMessageDialog(null, "El nombre excede los 15 carácteres");
+                flag += 1;
+            }
+            if(IdPlaza.length() < 1) {
+                JOptionPane.showMessageDialog(null, "._. mínimo escribe algo");
+                flag += 1;
+            }
+            String Nombre = txt_nom.getText();
+            if(Nombre.length() > 15) {
+                JOptionPane.showMessageDialog(null, "El nombre excede los 15 carácteres");
+                flag += 1;
+            }
+            if(Nombre.length() < 1) {
+                JOptionPane.showMessageDialog(null, "._. mínimo escribe algo");
+                flag += 1;
+            }
+            String Ciudad = txt_cid.getText();
+            if(Ciudad.length() > 15) {
+                JOptionPane.showMessageDialog(null, "El nombre excede los 15 carácteres");
+                flag += 1;
+            }
+            if(Ciudad.length() < 1) {
+                JOptionPane.showMessageDialog(null, "._. mínimo escribe algo");
+                flag += 1;
+            }
         Integer Policias = Integer.valueOf(txt_pol.getText());
         Integer NPC = Integer.valueOf(txt_pob.getText());
 
+        if(flag != 0) {
+            JOptionPane.showMessageDialog(null, "Procure no equivocarse");
+            txt_pla.setText("");
+            txt_nom.setText("");
+            txt_cid.setText("");
+            txt_pol.setText("");
+            txt_pob.setText("");
+        }
+        
         Plaza p = new Plaza(IdPlaza);
         p.setNombre(Nombre);
         p.setCiudad(Ciudad);

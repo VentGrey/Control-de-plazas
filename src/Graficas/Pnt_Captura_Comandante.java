@@ -208,6 +208,7 @@ public class Pnt_Captura_Comandante extends javax.swing.JInternalFrame {
             JOptionPane.showMessageDialog(null, "._. mínimo escribe algo");
             flag += 1;
         }
+        
         Integer Antiguedad = Integer.valueOf(txt_ant.getText());
         
         Comandante c = new Comandante(Cedula);
