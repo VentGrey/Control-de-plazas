@@ -29,7 +29,7 @@ public class Pnt_Modificar_Comandante extends javax.swing.JInternalFrame {
         jComboBox1.removeAllItems();
         
         for(int i = 1; i < datos.size(); i++) {
-            jComboBox1.addItem(datos.get(i).getNombre());
+            jComboBox1.addItem(String.valueOf(datos.get(i).getCedula()));
         }
     }
     
