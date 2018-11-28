@@ -57,6 +57,8 @@ public class Pnt_Modificar_Comandante extends javax.swing.JInternalFrame {
         txt_ant = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
 
+        setClosable(true);
+
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jButton1.setText("Cargar");

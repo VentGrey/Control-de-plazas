@@ -56,6 +56,8 @@ public class Pnt_Modificar_Plaza extends javax.swing.JInternalFrame {
         txt_NPC = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
 
+        setClosable(true);
+
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jButton1.setText("Cargar");
@@ -158,7 +160,6 @@ public class Pnt_Modificar_Plaza extends javax.swing.JInternalFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         int index = jComboBox1.getSelectedIndex();
         Plaza original = datos.get(index);
-        
         String IdPlaza = txt_ID.getText();
         String Nombre = original.getNombre();
         String Ciudad = original.getCiudad();
