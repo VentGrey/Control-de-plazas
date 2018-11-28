@@ -6,7 +6,15 @@
 package Graficas;
 
 import MisClases.Comandante;
+import MisClases.Plaza;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -15,6 +23,7 @@ import java.util.ArrayList;
 public class Principal extends javax.swing.JFrame {
 
     ArrayList<Comandante> datos = new ArrayList<>();
+    ArrayList<Plaza> datas = new ArrayList<>();
     /**
      * Creates new form Principal
      */
@@ -65,7 +74,6 @@ public class Principal extends javax.swing.JFrame {
             .addGap(0, 364, Short.MAX_VALUE)
         );
 
-        jMenuBar2.setBackground(new java.awt.Color(255, 255, 255));
         jMenuBar2.setForeground(new java.awt.Color(255, 255, 255));
         jMenuBar2.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
 
@@ -83,10 +91,20 @@ public class Principal extends javax.swing.JFrame {
 
         ver_coman.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/view.png"))); // NOI18N
         ver_coman.setText("Ver Comandantes");
+        ver_coman.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ver_comanActionPerformed(evt);
+            }
+        });
         jMenu4.add(ver_coman);
 
         edit_coman.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/modify.png"))); // NOI18N
         edit_coman.setText("Modificar Comandantes");
+        edit_coman.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                edit_comanActionPerformed(evt);
+            }
+        });
         jMenu4.add(edit_coman);
         jMenu4.add(jSeparator4);
 
@@ -114,19 +132,39 @@ public class Principal extends javax.swing.JFrame {
 
         jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/capture.png"))); // NOI18N
         jMenuItem1.setText("Ingresar Plaza");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
         jMenu3.add(jMenuItem1);
 
         jMenuItem4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/view.png"))); // NOI18N
         jMenuItem4.setText("Ver Plazas");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
         jMenu3.add(jMenuItem4);
 
         jMenuItem5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/modify.png"))); // NOI18N
         jMenuItem5.setText("Modificar Plazas");
+        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem5ActionPerformed(evt);
+            }
+        });
         jMenu3.add(jMenuItem5);
         jMenu3.add(jSeparator5);
 
         jMenuItem10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/media-floppy.png"))); // NOI18N
         jMenuItem10.setText("Guardar Archivo de Plazas");
+        jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem10ActionPerformed(evt);
+            }
+        });
         jMenu3.add(jMenuItem10);
 
         jMenuItem11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/folder-blue-print.png"))); // NOI18N
@@ -167,16 +205,120 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_cap_comandActionPerformed
 
     private void save_comActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_save_comActionPerformed
-        // TODO add your handling code here:
+        try {
+            FileWriter fw = new FileWriter("Comandantes.pol");
+            PrintWriter escritor = new PrintWriter(fw);
+            
+            escritor.println(datos.size());
+            for(int i = 0; i < datos.size(); i++) {
+                Comandante temp = datos.get(i);
+                escritor.println(temp.getCedula());
+                escritor.println(temp.getNombre());
+                escritor.println(temp.getApaterno());
+                escritor.println(temp.getEspecialidad());
+                escritor.println(temp.getAntiguedad());
+            }
+            escritor.close();
+            JOptionPane.showMessageDialog(null, "Archivo Guardado con éxito");
+        } catch(IOException ex) {
+            JOptionPane.showMessageDialog(null, "Error al guardar el archivo D:"); //Me pasé de las 80 líneas :(
+
+        }
     }//GEN-LAST:event_save_comActionPerformed
 
     private void open_comActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_open_comActionPerformed
-        // TODO add your handling code here:
+        try {
+            FileReader fr = new FileReader("Comandantes.pol");
+            BufferedReader lector = new BufferedReader(fr);
+            
+            int numreg = Integer.valueOf(lector.readLine());
+            
+            for(int i = 0; i < numreg; i++) {
+                Integer Cedula = Integer.valueOf(lector.readLine());
+                String Nombre = lector.readLine();
+                String Apaterno = lector.readLine();
+                String Especialidad = lector.readLine();
+                int Antiguedad = Integer.valueOf(lector.readLine());
+            
+                Comandante temp = new Comandante(Cedula);
+                temp.setNombre(Nombre);
+                temp.setApaterno(Apaterno);
+                temp.setEspecialidad(Especialidad);
+                temp.setAntiguedad(Antiguedad);
+                
+                datos.add(temp);
+            }
+            lector.close();
+            
+            JOptionPane.showMessageDialog(null, "Archivo guardado uwu");
+            
+        } catch(FileNotFoundException e) {
+            JOptionPane.showMessageDialog(null, "AAAAAAAA nosta el archivo D:");
+        } catch(IOException ex) {
+            JOptionPane.showMessageDialog(null, ">:V Revisa tu disco");
+        }
     }//GEN-LAST:event_open_comActionPerformed
 
     private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem11ActionPerformed
+
+    private void ver_comanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ver_comanActionPerformed
+        Pnt_Ver_Comandante cap = new Pnt_Ver_Comandante();
+        cap.setDatos(datos);
+        this.jDesktopPane1.add(cap);
+        cap.setVisible(true);
+    }//GEN-LAST:event_ver_comanActionPerformed
+
+    private void edit_comanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edit_comanActionPerformed
+        Pnt_Modificar_Comandante cap = new Pnt_Modificar_Comandante();
+        cap.setDatos(datos);
+        this.jDesktopPane1.add(cap);
+        cap.setVisible(true);
+    }//GEN-LAST:event_edit_comanActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        Pnt_Captura_Plaza cap = new Pnt_Captura_Plaza();
+        cap.setDatos(datas);
+        this.jDesktopPane1.add(cap);
+        cap.setVisible(true);
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        Pnt_Ver_Plaza cap = new Pnt_Ver_Plaza();
+        cap.setDatos(datas);
+        this.jDesktopPane1.add(cap);
+        cap.setVisible(true);
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
+
+    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+        Pnt_Modificar_Plaza cap = new Pnt_Modificar_Plaza();
+        cap.setDatos(datas);
+        this.jDesktopPane1.add(cap);
+        cap.setVisible(true);
+    }//GEN-LAST:event_jMenuItem5ActionPerformed
+
+    private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
+        try {
+            FileWriter fwi = new FileWriter("Plaza.Lnx");
+            PrintWriter escritor = new PrintWriter(fwi);
+            
+            escritor.println(datos.size());
+            for(int i = 0; i < datos.size(); i++) {
+                Plaza temp = datas.get(i);
+                escritor.println(temp.getIdPlaza());
+                escritor.println(temp.getNombre());
+                escritor.println(temp.getPolicias());
+                escritor.println(temp.getNPC());
+            }
+            
+            escritor.close();
+            JOptionPane.showMessageDialog(null, "Archivo Guardado con éxito");
+        } catch(IOException ex) {
+            JOptionPane.showMessageDialog(null, "Error al guardar el archivo D:"); //Otra vez me pasé de las 80 líneas :(
+
+        }
+    }//GEN-LAST:event_jMenuItem10ActionPerformed
 
     /**
      * @param args the command line arguments
