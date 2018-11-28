@@ -179,9 +179,13 @@ public class Pnt_Captura_Comandante extends javax.swing.JInternalFrame {
         Integer Cedula = Integer.valueOf(txt_ced.getText());
         String Nombre = txt_nom.getText();
         String Apaterno = txt_ape.getText();
+        String Especialidad = txt_esp.getText();
         Integer Antiguedad = Integer.valueOf(txt_ant.getText());
         
         Comandante c = new Comandante(Cedula);
+        c.setNombre(Nombre);
+        c.setApaterno(Apaterno);
+        c.setEspecialidad(Especialidad);
         c.setAntiguedad(Antiguedad);
         
         this.datos.add(c);

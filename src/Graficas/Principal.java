@@ -260,7 +260,36 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_open_comActionPerformed
 
     private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed
-        // TODO add your handling code here:
+        try {
+            FileReader fri = new FileReader("Plaza.Lnx");
+            BufferedReader lector = new BufferedReader(fri);
+            
+            int numregi = Integer.valueOf(lector.readLine());
+            
+            for(int i = 0; i < numregi; i++) {
+                String IdPlaza = lector.readLine();
+                String Nombre = lector.readLine();
+                String Ciudad = lector.readLine();
+                int Policias = Integer.valueOf(lector.readLine());
+                int NPC = Integer.valueOf(lector.readLine());
+            
+                Plaza tempi = new Plaza(IdPlaza);
+                tempi.setNombre(Nombre);
+                tempi.setCiudad(Ciudad);
+                tempi.setPolicias(Policias);
+                tempi.setNPC(NPC);
+                
+                datas.add(tempi);
+            }
+            lector.close();
+            
+            JOptionPane.showMessageDialog(null, "Archivo guardado uwu");
+            
+        } catch(FileNotFoundException e) {
+            JOptionPane.showMessageDialog(null, "AAAAAAAA nosta el archivo D:");
+        } catch(IOException ex) {
+            JOptionPane.showMessageDialog(null, ">:V Revisa tu disco");
+        }
     }//GEN-LAST:event_jMenuItem11ActionPerformed
 
     private void ver_comanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ver_comanActionPerformed
