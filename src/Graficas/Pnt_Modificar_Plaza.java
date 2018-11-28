@@ -28,8 +28,8 @@ public class Pnt_Modificar_Plaza extends javax.swing.JInternalFrame {
         this.datos = datos;
         jComboBox1.removeAllItems();
         
-        for(int i = 1; i < datos.size(); i++) {
-            jComboBox1.addItem(datos.get(i).getNombre());
+        for(int i = 0; i < datos.size(); i++) {
+            jComboBox1.addItem(String.valueOf(datos.get(i).getIdPlaza()));
         }
     }
     
